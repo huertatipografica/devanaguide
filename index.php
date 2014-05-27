@@ -21,7 +21,7 @@
 	?>
 	</div>
 	<div class="header">
-		<p>Vesion 0.1 | Desarrollado por Andrés Torresi | Huerta Tipográfica (andres@huertatipografica.com) | <a href="deva.zip">Descargar sitio</a></p>
+		<p><a href="http://devanaguide.huertatipografica.com">Devanaguide</a> Vesion 0.1 | Desarrollado por Andrés Torresi | <a href="http://www.huertatipografica.com/">Huerta Tipográfica</a> (andres@huertatipografica.com) | <a href="https://github.com/andrestelex/devanaguide">Contribute on Github</a></p>
 		<p>Podés descargar y modificar este software | Feel free to modify this software</p>
 		<h2>Ayuda / Help</h2>
 		<p>Pon tus fuentes devanagari en la carpeta «fonts» | Put your devanagari fonts in «fonts» folder</p>
