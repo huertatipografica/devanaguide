@@ -22,6 +22,7 @@ Ha sido elaborado a partir de este diccionario: http://sanskritdocuments.org/hin
 
 
 Desarrollado por [Andrés Torresi](mailto:andres@huertatipografica.com) para [Huerta Tipográfica](http://www.huertatipografica.com)
+Colaborador: [Juan Pablo del Peral](mailto:juan@huertatipografica.com)
 
 
 ### License
