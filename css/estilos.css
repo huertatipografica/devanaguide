@@ -1,5 +1,6 @@
 .menu{
-	font-family:'Devanagari MT','Arial','FreeSerif',sans-serif;
+	/*font-family:'Devanagari MT','Arial','FreeSerif',sans-serif;*/
+	font-family: sans-serif;
 	margin:20px;
 }
 
@@ -96,7 +97,7 @@ h2{
 	margin:0 20px 20px 0;
 	padding:20px;
 	font-size:80px;
-	line-height:100%;
+	line-height:80px;
 	text-align:center;
 }
 
@@ -104,11 +105,13 @@ h2{
 	clear:both;
 }
 
-.thumbs label{
-	font-size:10px;
-	line-height:10px;
+.thumbs label, .thumbWord label {
+	color: #666;
+	font-family: "Lucida Grande","Lucida Sans Unicode", arial, sans-serif !important;
+	font-size: 10px;
+	line-height: 10px;
+	font-style: normal;
 	display:block;
-	text-align:right;
 	clear:both;
 }
 
@@ -119,8 +122,8 @@ h2{
 	background:#eee;
 	text-align:left;
 	padding:20px;
-	font-size:40px;
-	line-height:100%;
+	font-size:50px;
+	line-height:50px;
 }
 
 .signos{
