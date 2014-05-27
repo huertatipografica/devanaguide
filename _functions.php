@@ -13,19 +13,17 @@ while ($line = fgets($fh)) {
 }
 fclose($fh);
 
-
 function uni($value){
 	if($value=='None'){
 		$output='_';
 	} else {
-	$unicode='\u'.$value;
-	$output=json_decode('"'.$unicode.'"');
+		$unicode='\u'.$value;
+		$output=json_decode('"'.$unicode.'"');
 	}
 	return $output;
 }
 
-function multiexplode ($delimiters,$string) {
-    
+function multiexplode ($delimiters,$string) {   
     $ready = str_replace($delimiters, $delimiters[0], $string);
     $launch = explode($delimiters[0], $ready);
     return  $launch;
