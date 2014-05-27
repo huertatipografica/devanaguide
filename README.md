@@ -3,6 +3,7 @@ Devanaguide
 
 Este es un sitio web desarrollado en PHP para visualizar los glifos del sistema de escritura Devanagari en diferentes diseños.
 Además muestra el signo en un contexto de 100 palabras que lo utilizan.
+Podés verlo funcionando en http://devanaguide.huertatipografica.com/
 
 #Requerimientos
 
