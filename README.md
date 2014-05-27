@@ -1,3 +1,5 @@
+[ENGLISH VERSION](https://github.com/andrestelex/devanaguide/blob/master/README_en.md)
+
 Devanaguide
 ===========
 
