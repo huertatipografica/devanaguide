@@ -2,6 +2,7 @@ Devanaguide
 ===========
 
 This is a web site in PHP created to visualize devanagari glyphs in different designs. It also shows glyph information and different words which use it.
+Live version at http://devanaguide.huertatipografica.com/
 
 #Requirements
 
@@ -22,7 +23,8 @@ The dictionary contains 16,000 comma separated devanagari words. They are stored
 The words are taken from this source: http://sanskritdocuments.org/hindi/dict/eng-hin_unic.html
 
 
-Developed [Andrés Torresi](mailto:andres@huertatipografica.com) para [Huerta Tipográfica](http://www.huertatipografica.com)
+Developed [Andrés Torresi](mailto:andres@huertatipografica.com) para [Huerta Tipográfica](http://www.huertatipografica.com).
+Colaborator: [Juan Pablo del Peral](mailto:juan@huertatipografica.com)
 
 
 ### License
