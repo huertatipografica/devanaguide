@@ -1,6 +1,7 @@
 <?
 $dir='fonts';
 $fuentes=array();
+
 #lista de fuentes
 if ($handle = opendir($dir)) {
 
@@ -14,10 +15,12 @@ if ($handle = opendir($dir)) {
     }
     closedir($handle);
 }
+
 #echo '<pre>';
 #print_r($fuentes);
 #echo '</pre>';
 
+natsort($fuentes);
 foreach($fuentes as $fuente){
 	$css.="@font-face {
     font-family: '".substr($fuente, 0, -4)."';
