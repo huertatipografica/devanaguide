@@ -94,7 +94,7 @@ for($i=0;$i<100;$i++){
 				?>
 			</select>
 			
-			<div class="contexto">
+			<div class="contexto" id="contexto">
 				<? echo $textoPrueba?>
 			</div>
 			
