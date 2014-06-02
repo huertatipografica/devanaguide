@@ -83,12 +83,32 @@ for($i=0;$i<100;$i++){
 			
 			<h2>Words containing <? echo $glifo['nombre'] ?></h2>
 			<p><? echo 'Mostrando 100 de '.count($wordlist).' palabras encontradas. ('.count($words).' total)'?></p>
+
+			<select id="preview_font" onchange="setfont();">
+				<option value="">Default</option>
+				<? 
+				foreach ($fuentes as $fuente) {
+					$nombre_fuente=substr($fuente, 0, -4);
+					echo '<option value="'.$nombre_fuente.'">'.$nombre_fuente.'</option>';
+				}
+				?>
+			</select>
+			
 			<div class="contexto">
 				<? echo $textoPrueba?>
 			</div>
 			
 		</div>
 	</div>
-	
+
+<script type="text/javascript">
+	function setfont() {
+		var e = document.getElementById("preview_font");
+		var myfont = e.options[e.selectedIndex].value;
+		
+		var texto_ejemplo = document.querySelector('#contexto');
+		texto_ejemplo.setAttribute("style","font-family: " + myfont);
+	}
+</script>		
 </body>
 </html>
