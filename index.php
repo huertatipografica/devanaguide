@@ -9,6 +9,7 @@ include('_functions.php');
 	<meta name="author" content="Deva">
 	<title>Devanaguide</title>
 	<link type="text/css" href="css/estilos.css" rel="stylesheet" charset="utf-8">
+	<script type='text/javascript' src='/js/jquery-2.1.1.min.js'></script>
 </head>
 
 <body class="signos">

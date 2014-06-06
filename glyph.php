@@ -77,6 +77,11 @@ for($i=0;$i<100;$i++){
 				<? echo $thumbsBig ?>
 			</div>
 			
+			<div id="inputtext">
+				Change preview: <input id="slide" type="text" value="<? echo $char.'Hamburge'.$char.'vontpids0123' ?>"
+				onchange="updateText(this.value);" />
+			</div>
+			
 			<div class="thumbs">
 				<? echo $thumbsWord ?>
 			</div>
@@ -108,6 +113,14 @@ for($i=0;$i<100;$i++){
 		
 		var texto_ejemplo = document.querySelector('#contexto');
 		texto_ejemplo.setAttribute("style","font-family: " + myfont);
+	}
+	function updateText(inputtext) {
+		var tipos = document.getElementsByClassName('thumbWord'),
+		i = tipos.length;
+
+		while(i--) {
+			tipos[i].innerHTML =inputtext;
+		}
 	}
 </script>		
 </body>

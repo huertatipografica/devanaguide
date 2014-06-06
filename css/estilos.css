@@ -156,6 +156,17 @@ h2{
 	line-height:12px;
 	text-align:center;
 }
-	
+
+#inputtext {
+	clear: both;
+	float: none;
+	margin: 35px 0;
+}
+#inputtext input {
+	font-size: 30px;
+	width: 100%;
+	line-height: 40px;
+	padding: 10px;
+}
 	
 	
