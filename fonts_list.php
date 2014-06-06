@@ -1,29 +1,38 @@
 <?
-$dir=['fonts/otras', 'fonts'];
+$dir='fonts';
+$dir2='fonts/otras';
 $fuentes=array();
+$fuentes2=array();
 
 #lista de fuentes
-foreach ($dir as $dir) {
-    if ($handle = opendir($dir)) {
 
-        /* This is the correct way to loop over the directory. */
-        while (false !== ($entry = readdir($handle))) {
+if ($handle = opendir($dir)) {
+    /* This is the correct way to loop over the directory. */
+    while (false !== ($entry = readdir($handle))) {
         #solo si son otf o ttf
-            if(strpos($entry,".otf") or strpos($entry,".ttf")){
-                array_push($fuentes, $entry);
-            }
-
+        if(strpos($entry,".otf") or strpos($entry,".ttf")){
+            array_push($fuentes, $entry);
         }
-        closedir($handle);
+
     }
+    closedir($handle);
 }
 
 
-// echo '<pre>';
-// print_r($fuentes);
-// echo '</pre>';
+if ($handle = opendir($dir2)) {
+    /* This is the correct way to loop over the directory. */
+    while (false !== ($entry = readdir($handle))) {
+        #solo si son otf o ttf
+        if(strpos($entry,".otf") or strpos($entry,".ttf")){
+            array_push($fuentes2, $entry);
+        }
 
-natsort($fuentes);
+    }
+    closedir($handle);
+}
+
+
+
 foreach($fuentes as $fuente){
 	$css.="@font-face {
         font-family: '".substr($fuente, 0, -4)."';
@@ -32,5 +41,17 @@ foreach($fuentes as $fuente){
         font-style: normal;
     }\n";
 };
+foreach($fuentes2 as $fuente){
+    $css.="@font-face {
+        font-family: '".substr($fuente, 0, -4)."';
+        src: url('/fonts/otras/$fuente');
+        font-weight: normal;
+        font-style: normal;
+    }\n";
+};
+
+// echo '<pre>';
+// print_r(array_merge($fuentes, $fuentes2));
+// echo '</pre>';
 
 ?>

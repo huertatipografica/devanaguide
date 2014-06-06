@@ -7,7 +7,7 @@ $nombre = $_GET['nombre'];
 $glifo = $signo[$nombre];
 $char = uni($glifo['char']);
 	
-foreach ($fuentes as $fuente){
+foreach (array_merge($fuentes2, $fuentes) as $fuente){
 	$nombre_fuente=substr($fuente, 0, -4);
 	$thumbsBig.='<div class="thumbBig" style="font-family:'.$nombre_fuente.'">'.$char.'<label>'.$nombre_fuente.'</label></div>'."\n";
 	$thumbsWord.='<div class="thumbWord" style="font-family:'.$nombre_fuente.'">'.'<span class="dyntext">'.$char.'Hamburge'.$char.'vontpids0123</span><label>'.$nombre_fuente.'</label></div>'."\n";
