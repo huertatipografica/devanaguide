@@ -19,9 +19,9 @@ foreach ($dir as $dir) {
 }
 
 
-echo '<pre>';
-print_r($fuentes);
-echo '</pre>';
+// echo '<pre>';
+// print_r($fuentes);
+// echo '</pre>';
 
 natsort($fuentes);
 foreach($fuentes as $fuente){
