@@ -1,5 +1,5 @@
 <?
-$dir=['fonts', 'fonts/otras'];
+$dir=['fonts/otras', 'fonts'];
 $fuentes=array();
 
 #lista de fuentes
@@ -27,7 +27,7 @@ natsort($fuentes);
 foreach($fuentes as $fuente){
 	$css.="@font-face {
         font-family: '".substr($fuente, 0, -4)."';
-        src: url('".$dir."/".$fuente."');
+        src: url('/fonts/$fuente');
         font-weight: normal;
         font-style: normal;
     }\n";
