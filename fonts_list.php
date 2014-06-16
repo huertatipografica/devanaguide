@@ -36,7 +36,7 @@ if ($handle = opendir($dir2)) {
 foreach($fuentes as $fuente){
 	$css.="@font-face {
         font-family: '".substr($fuente, 0, -4)."';
-        src: url('/fonts/$fuente');
+        src: url('fonts/$fuente');
         font-weight: normal;
         font-style: normal;
     }\n";
@@ -44,7 +44,7 @@ foreach($fuentes as $fuente){
 foreach($fuentes2 as $fuente){
     $css.="@font-face {
         font-family: '".substr($fuente, 0, -4)."';
-        src: url('/fonts/otras/$fuente');
+        src: url('fonts/otras/$fuente');
         font-weight: normal;
         font-style: normal;
     }\n";
