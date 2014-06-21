@@ -1,6 +1,6 @@
 <?
 $dir='fonts';
-$dir2='fonts/otras';
+$dir2='fonts/test';
 $fuentes=array();
 $fuentes2=array();
 
@@ -44,7 +44,7 @@ foreach($fuentes as $fuente){
 foreach($fuentes2 as $fuente){
     $css.="@font-face {
         font-family: '".substr($fuente, 0, -4)."';
-        src: url('fonts/otras/$fuente');
+        src: url('fonts/test/$fuente');
         font-weight: normal;
         font-style: normal;
     }\n";
