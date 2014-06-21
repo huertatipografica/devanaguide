@@ -9,8 +9,8 @@ $char = uni($glifo['char']);
 	
 foreach (array_merge($fuentes2, $fuentes) as $fuente){
 	$nombre_fuente=substr($fuente, 0, -4);
-	$thumbsBig.='<div class="thumbBig" style="font-family:'.$nombre_fuente.'">'.$char.'<label>'.$nombre_fuente.'</label></div>'."\n";
-	$thumbsWord.='<div class="thumbWord" style="font-family:'.$nombre_fuente.'">'.'<span class="dyntext">'.$char.'कagnv</span><label>'.$nombre_fuente.'</label></div>'."\n";
+	$thumbsBig.='<div class="thumbBig" style="font-family:'.$nombre_fuente.', AdobeBlank">'.$char.'<label>'.$nombre_fuente.'</label></div>'."\n";
+	$thumbsWord.='<div class="thumbWord" style="font-family:'.$nombre_fuente.', AdobeBlank">'.'<span class="dyntext">'.$char.'कagnv</span><label>'.$nombre_fuente.'</label></div>'."\n";
 }
 
 #abre diccionario
