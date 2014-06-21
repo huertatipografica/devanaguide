@@ -6,8 +6,9 @@ include('fonts_list.php');
 $nombre = $_GET['nombre'];
 $glifo = $signo[$nombre];
 $char = uni($glifo['char']);
+$fonts = array_merge($fuentes2, $fuentes);
 	
-foreach (array_merge($fuentes2, $fuentes) as $fuente){
+foreach ($fonts as $fuente){
 	$nombre_fuente=substr($fuente, 0, -4);
 	$thumbsBig.='<div class="thumbBig" style="font-family:'.$nombre_fuente.', AdobeBlank">'.$char.'<label>'.$nombre_fuente.'</label></div>'."\n";
 	$thumbsWord.='<div class="thumbWord" style="font-family:'.$nombre_fuente.', AdobeBlank">'.'<span class="dyntext">'.$char.'कagnv</span><label>'.$nombre_fuente.'</label></div>'."\n";
@@ -92,7 +93,7 @@ for($i=0;$i<100;$i++){
 			<select id="preview_font" onchange="setfont();">
 				<option value="">Default</option>
 				<? 
-				foreach ($fuentes as $fuente) {
+				foreach ($fonts as $fuente) {
 					$nombre_fuente=substr($fuente, 0, -4);
 					echo '<option value="'.$nombre_fuente.'">'.$nombre_fuente.'</option>';
 				}
