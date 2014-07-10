@@ -48,6 +48,8 @@ for($i=0;$i<100;$i++){
 <? echo $css?>
 </style>
 <link type="text/css" href="css/estilos.css" rel="stylesheet" charset="utf-8">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 </head>
 
 <body>
@@ -115,6 +117,7 @@ for($i=0;$i<100;$i++){
 		var texto_ejemplo = document.querySelector('#contexto');
 		texto_ejemplo.setAttribute("style","font-family: " + myfont);
 	}
+	// Text input for change texts
 	function updateText(inputtext) {
 		var tipos = document.getElementsByClassName('dyntext'),
 		i = tipos.length;
@@ -123,6 +126,11 @@ for($i=0;$i<100;$i++){
 			tipos[i].innerHTML =inputtext;
 		}
 	}
+	// Drag boxes
+	$(function() {
+		$( ".thumbs" ).sortable();
+		$( ".thumbs" ).disableSelection();
+	});
 </script>		
 </body>
 </html>
