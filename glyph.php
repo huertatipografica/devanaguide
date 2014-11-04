@@ -10,8 +10,8 @@ $fonts = array_merge($fuentes2, $fuentes);
 	
 foreach ($fonts as $fuente){
 	$nombre_fuente=substr($fuente, 0, -4);
-	$thumbsBig.='<div class="thumbBig" style="font-family:'.$nombre_fuente.', AdobeBlank">'.$char.'<label>'.$nombre_fuente.'</label></div>'."\n";
-	$thumbsWord.='<div class="thumbWord" style="font-family:'.$nombre_fuente.', AdobeBlank">'.'<span class="dyntext">'.$char.'कagnv</span><label>'.$nombre_fuente.'</label></div>'."\n";
+	$thumbsBig.='<div class="thumbBig" style="font-family:\''.$nombre_fuente.'\', AdobeBlank">'.$char.'<label>'.$nombre_fuente.'</label></div>'."\n";
+	$thumbsWord.='<div class="thumbWord" style="font-family:\''.$nombre_fuente.'\', AdobeBlank">'.'<span class="dyntext">'.$char.'कagnv</span><label>'.$nombre_fuente.'</label></div>'."\n";
 }
 
 #abre diccionario
@@ -48,8 +48,41 @@ for($i=0;$i<100;$i++){
 <? echo $css?>
 </style>
 <link type="text/css" href="css/estilos.css" rel="stylesheet" charset="utf-8">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+<script>
+$(function() {
+    var fSizeArray = new Array('48', '72', '90', '100', '125', '150', '175', '200', '250', '300');
+    $('#slider').slider({
+        value: 4,
+        min: 0,
+        max: 9,
+        step: 1,
+        slide: function(event, ui) {
+            var vfSizeArray = fSizeArray[ui.value];
+            $('#font_size').val(vfSizeArray + ' px');
+            $('.thumbWord').css('font-size', vfSizeArray + 'px' );
+        }
+    });
+    $('#font_size').val((fSizeArray[$('#slider').slider('value')]) + ' px');
+});
+$(function() {
+    var fSizeArray = new Array('18', '24', '36', '40', '50', '64', '72');
+    $('#sliderb').slider({
+        value: 4,
+        min: 0,
+        max: 6,
+        step: 1,
+        slide: function(event, ui) {
+            var vfSizeArray = fSizeArray[ui.value];
+            $('#font_sizeb').val(vfSizeArray + ' px');
+            $('#contexto').css('font-size', vfSizeArray + 'px' );
+        }
+    });
+    $('#font_sizeb').val((fSizeArray[$('#slider').slider('value')]) + ' px');
+});
+</script>
 </head>
 
 <body>
@@ -84,7 +117,10 @@ for($i=0;$i<100;$i++){
 				Change preview: <input id="slide" type="text" value="<? echo $char.'कagnv' ?>"
 				onchange="updateText(this.value);" />
 			</div>
-			
+
+			<div id="slider" style="width: 200px; display: inline-block; margin: 0 7px 7px 0;"></div>
+			<input type="text" id="font_size" style="border:0; color:#222; font-weight:bold; vertical-align: top">
+
 			<div class="thumbs">
 				<? echo $thumbsWord ?>
 			</div>
@@ -97,11 +133,14 @@ for($i=0;$i<100;$i++){
 				<? 
 				foreach ($fonts as $fuente) {
 					$nombre_fuente=substr($fuente, 0, -4);
-					echo '<option value="'.$nombre_fuente.'">'.$nombre_fuente.'</option>';
+					echo '<option value="\''.$nombre_fuente.'\',UnicodeFallback">'.$nombre_fuente.'</option>';
 				}
 				?>
 			</select>
-			
+
+			<div id="sliderb" style="width: 200px; display: inline-block; margin: 0 7px 0; vertical-align: middle"></div>
+			<input type="text" id="font_sizeb" style="border:0; color:#222; font-weight:bold;">
+
 			<div class="contexto" id="contexto">
 				<? echo $textoPrueba?>
 			</div>
