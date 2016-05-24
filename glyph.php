@@ -42,7 +42,6 @@ for($i=0;$i<100;$i++){
 <html>
 <head>
 <?php include 'meta.php'; ?>
-<meta name="author" content="Deva">
 <title>Devanaguide- <? echo $glifo['nombre']?></title>
 <style>
 <? echo $css?>
