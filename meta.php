@@ -6,7 +6,9 @@
 
 	<meta property="og:title" content="DevanaGuide :: Huerta Tipográfica" />
 	<meta property="og:site_name" content="DevanaGuide :: Huerta Tipográfica" />
+	<meta property="og:author" content="Huerta Tipográfica" />
 	<meta property="og:url" content="http://devanaguide.huertatipografica.com/"/>
+	<meta property="og:description" content="Website for visualizing and comparing the devanagari alphabet in different fonts and contexts." />
 
 	<meta property='og:image' content='http://devanaguide.huertatipografica.com/image.png'/>
 	<meta property="og:image:type" content="image/png" />
