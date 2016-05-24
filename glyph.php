@@ -7,7 +7,7 @@ $nombre = $_GET['nombre'];
 $glifo = $signo[$nombre];
 $char = uni($glifo['char']);
 $fonts = array_merge($fuentes2, $fuentes);
-	
+
 foreach ($fonts as $fuente){
 	$nombre_fuente=substr($fuente, 0, -4);
 	$thumbsBig.='<div class="thumbBig" style="font-family:\''.$nombre_fuente.'\', AdobeBlank">'.$char.'<label>'.$nombre_fuente.'</label></div>'."\n";
@@ -41,7 +41,7 @@ for($i=0;$i<100;$i++){
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<?php include 'meta.php'; ?>
 <meta name="author" content="Deva">
 <title>Devanaguide- <? echo $glifo['nombre']?></title>
 <style>
@@ -89,7 +89,7 @@ $(function() {
 
 	<div id="left">
 		<div class="container">
-			
+
 			<a href="index.php"><< Menu</a><br /><br />
 			<table id="data" cellpading=0 cellspacing=0>
 				<tr><th>Categoria</th><td><? echo $glifo['categoria']?></td></tr>
@@ -100,19 +100,19 @@ $(function() {
 			</table>
 			<h3>Descripcion</h3>
 			<? echo $glifo['descripcion']?>
-			
+
 		</div>
 	</div>
-	
+
 	<div id="main">
 		<div class="container">
-			
+
 			<h2><? echo $glifo['nombre'] ?></h2>
-			
+
 			<div class="thumbs">
 				<? echo $thumbsBig ?>
 			</div>
-			
+
 			<div id="inputtext">
 				Change preview: <input id="slide" type="text" value="<? echo $char.'कagnv' ?>"
 				onchange="updateText(this.value);" />
@@ -124,13 +124,13 @@ $(function() {
 			<div class="thumbs">
 				<? echo $thumbsWord ?>
 			</div>
-			
+
 			<h2>Words containing <? echo $glifo['nombre'] ?></h2>
 			<p><? echo 'Mostrando 100 de '.count($wordlist).' palabras encontradas. ('.count($words).' total)'?></p>
 
 			<select id="preview_font" onchange="setfont();">
 				<option value="">Default</option>
-				<? 
+				<?
 				foreach ($fonts as $fuente) {
 					$nombre_fuente=substr($fuente, 0, -4);
 					echo '<option value="\''.$nombre_fuente.'\',UnicodeFallback">'.$nombre_fuente.'</option>';
@@ -144,7 +144,7 @@ $(function() {
 			<div class="contexto" id="contexto">
 				<? echo $textoPrueba?>
 			</div>
-			
+
 		</div>
 	</div>
 
@@ -152,7 +152,7 @@ $(function() {
 	function setfont() {
 		var e = document.getElementById("preview_font");
 		var myfont = e.options[e.selectedIndex].value;
-		
+
 		var texto_ejemplo = document.querySelector('#contexto');
 		texto_ejemplo.setAttribute("style","font-family: " + myfont);
 	}
@@ -170,6 +170,6 @@ $(function() {
 		$( ".thumbs" ).sortable();
 		$( ".thumbs" ).disableSelection();
 	});
-</script>		
+</script>
 </body>
 </html>
